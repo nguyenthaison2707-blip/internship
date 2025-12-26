@@ -140,7 +140,6 @@ function buildTopicGroups(
 ) {
   const search = q.trim().toLowerCase();
 
-  // filter term (FE)
   const termFiltered = rows.filter((r) => {
     if (!selectedTermId) return true;
     const termId = r.internship_terms?.id;
@@ -191,7 +190,6 @@ function buildTopicGroups(
     return { ...g, internships: sorted, currentCount: sorted.length };
   });
 
-  // search theo topic + theo SV bên trong
   if (search) {
     groups = groups.filter((g) => {
       const topicText = [
@@ -220,7 +218,6 @@ function buildTopicGroups(
     });
   }
 
-  // sort: đề tài còn trống lên trước, rồi đề tài nhiều SV hơn
   groups.sort((a, b) => {
     const aFull = a.currentCount >= a.maxStudents ? 1 : 0;
     const bFull = b.currentCount >= b.maxStudents ? 1 : 0;
@@ -384,7 +381,6 @@ function TopicsGroupedTable(props: {
   );
 }
 
-// ============================
 // Page
 // ============================
 const isActiveTerm = (t: InternshipTermWithStats) => {
