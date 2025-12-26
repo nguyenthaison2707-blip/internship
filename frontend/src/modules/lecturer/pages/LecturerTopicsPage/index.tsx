@@ -125,7 +125,6 @@ export default function LecturerTopicsPage() {
       setTopicPage(1)
     }, 300)
     return () => clearTimeout(t)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q])
 
   const selectedTermLabel = useMemo(() => {

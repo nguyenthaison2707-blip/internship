@@ -11,7 +11,7 @@ import WorklogPanel from "../../_components/WorklogPanel";
 import ReviewDrawer from "../../_components/ReviewDrawer";
 
 type SupervisedInternship = {
-  id: string | number; // internship_id
+  id: string | number; 
   students?: {
     student_code?: string | null;
     users?: { full_name?: string | null; email?: string | null } | null;

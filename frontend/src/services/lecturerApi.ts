@@ -1,8 +1,6 @@
 import { api } from "./config"
 
-// =========================
-// Types
-// =========================
+
 export type PaginationMeta = { total: number; page: number; limit: number }
 export type ListResponse<T> = { items: T[]; meta: PaginationMeta }
 
